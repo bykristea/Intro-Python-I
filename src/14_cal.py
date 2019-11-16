@@ -22,3 +22,30 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# print(calendar.month(2019, 12))
+
+# create calendar, starting on Mondays
+c = calendar.TextCalendar(calendar.MONDAY)
+
+# get user input integers split into list seperated by a space
+user_input = input("Add month and year, ex 12 2019: ").split(' ')
+
+today = datetime.today()
+year = today.year
+month = today.month
+
+
+def str():
+    if len(user_input) > 1:
+      # if no numbers entered will return current month and year
+        global month
+        global year
+        # specifing the value from user
+        month = int(user_input[0])
+        year = int(user_input[1])
+
+
+str()
+
+print(c.formatmonth(year, month))
